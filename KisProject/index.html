@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <h1>Regisztráció</h1>
+
+    <form id="regForm" action="feldolgoz.php" method="POST" novalidate>
+
+        <div class="mb-3">
+            <label for="nev" class="form-label">Név:</label>
+            <input type="text" class="form-control" id="nev" name="nev">
+
+            <div class="invalid-feedback">
+                A név kötelező és nem tartalmazhat számot!
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="loginnev" class="form-label">Login név:</label>
+            <input type="text" class="form-control" id="loginnev" name="loginnev">
+
+            <div class="invalid-feedback">
+                A login név megadása kötelező!
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="jelszo" class="form-label">Jelszó:</label>
+            <input type="password" class="form-control" id="jelszo" name="jelszo">
+
+            <div class="invalid-feedback">
+                A jelszó megadása kötelező!
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="szerepkor" class="form-label">Szerepkör:</label>
+
+            <select class="form-select" id="szerepkor" name="szerepkor">
+                <option value="">Válassz!</option>
+                <option value="felhasznalo">Felhasználó</option>
+                <option value="admin">Admin</option>
+                <option value="karbantarto">Karbantartó</option>
+            </select>
+
+            <div class="invalid-feedback">
+                Válassz szerepkört!
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Autó:</label>
+
+            <div>
+                <input type="radio" name="auto" value="1" id="autoVan">
+                <label for="autoVan">Van</label>
+
+                <input type="radio" name="auto" value="0" id="autoNincs" checked>
+                <label for="autoNincs">Nincs</label>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">PC:</label>
+
+            <div>
+                <input type="radio" name="pc" value="1" id="pcVan">
+                <label for="pcVan">Van</label>
+
+                <input type="radio" name="pc" value="0" id="pcNincs" checked>
+                <label for="pcNincs">Nincs</label>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="mobil" class="form-label">Mobil:</label>
+            <input type="text" class="form-control" id="mobil" name="mobil">
+
+            <div class="invalid-feedback">
+                Hibás telefonszám!
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" class="form-control" id="email" name="email">
+
+            <div class="invalid-feedback">
+                Hibás email cím!
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">
+            Küldés
+        </button>
+
+        <button type="reset" class="btn btn-secondary">
+            Mégsem
+        </button>
+
+    </form>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
